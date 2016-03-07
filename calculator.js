@@ -6,22 +6,22 @@ var handleClick = function(){
 	var number2 = document.getElementById("secondNum").value;
 	var parsedNumber1 = parseFloat (number1);
 	var parsedNumber2 = parseFloat (number2);
+	var answer;
+	var operation;
 
 	if (choice == "addition") {
-		var answer = parsedNumber1 + parsedNumber2;	
-		document.write("The answer is " + answer);
-		console.log("The answer is " + answer);
+		operation = " + ";
+		answer = parsedNumber1 + parsedNumber2;	
 }		else if(choice =="subtraction") {
-		var answer = parsedNumber1 - parsedNumber2;
-		document.write("The answer is " + answer);
-		console.log("The answer is " + answer);
+		operation = " - ";
+		answer = parsedNumber1 - parsedNumber2;
 }		else if(choice =="multiplication") {
-		var answer = parsedNumber1 * parsedNumber2;
-		document.write("The answer is " + answer);
-		console.log("The answer is " + answer);
+		operation = " * ";
+		answer = parsedNumber1 * parsedNumber2;
 }		else if(choice =="divide") {
-		var answer = parsedNumber1 / parsedNumber2;
-		document.write("The answer is " + answer);
-		console.log("The answer is " + answer);
-	}
+		operation = " / ";
+		answer = parsedNumber1 / parsedNumber2;
+}	
+	var answersArea = document.getElementById("answers");
+	answersArea.innerHTML = number1 + " + " + number2 + " = " + answer;
 }
